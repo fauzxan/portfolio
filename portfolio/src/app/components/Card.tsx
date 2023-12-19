@@ -7,7 +7,7 @@ export default function Card() {
       <div className="p-5">
         <a href="#">
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-            Noteworthy technology acquisitions 2021
+           Project Highlights
           </h5>
         </a>
         <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
@@ -28,9 +28,9 @@ export default function Card() {
           >
             <path
               stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
               d="M1 5h12m0 0L9 1m4 4L9 9"
             />
           </svg>
