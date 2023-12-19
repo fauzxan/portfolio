@@ -7,7 +7,7 @@ export default function Jumbotron() {
             <div className="mb-4 font-extrabold tracking-tight leading-none text-white md:text-2xl lg:text-3xl">
               Futurist • Entrepreneur • Engineer
             </div>
-            Hey everyone! I'm a full time software engineer and a student, with
+            Hey everyone! I&apos;m a full time software engineer and a student, with
             a wide knowledge base in backend systems - particularly in networks,
             distributed systems, and data engineering. I am currently also the
             co-founder of a startup -{" "}
