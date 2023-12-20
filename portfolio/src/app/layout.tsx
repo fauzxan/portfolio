@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<body className="bg-sky-950 min-h-screen">{children}</body>
+			<body className="bg-gradient-to-r from-sky-700 dark:bg-black dark:bg-gradient-to-r dark:from-sky-950 min-h-screen">{children}</body>
 		</html>
 	);
 }

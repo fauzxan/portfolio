@@ -26,9 +26,7 @@ export function NavBar() {
 		<nav
 			className={`bg-${
 				isScrolled ? "sky-800" : "white"
-			} border-gray-200 dark:bg-${
-				isScrolled ? "gray-900" : "gray-700"
-			} transition-all top-0 fixed w-full z-50`}
+			} border-gray-200 dark:bg-sky-950 transition-all top-0 fixed w-full z-50`}
 		>
 			<div
 				className={`max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 ${
@@ -80,7 +78,7 @@ export function NavBar() {
 					id="navbar-sticky"
 				>
 					<ul
-						className="font-medium flex flex-col p-4 md:p-0 mt-4  rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+						className="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:border-gray-700"
 						onMouseLeave={toggleMobileMenu}
 					>
 						<li>
