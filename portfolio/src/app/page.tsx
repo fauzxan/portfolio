@@ -5,12 +5,12 @@ import Jumbotron from "./components/Jumbotron";
 import Carousel from "./components/Carousel";
 
 export default function Home() {
-  return (
-    <main className="">
-      <NavBar />
-      <Jumbotron />
-      <Carousel />
-      <Footer />
-    </main>
-  );
+	return (
+		<main className="">
+			<NavBar />
+			<Jumbotron />
+			<Carousel />
+			<Footer />
+		</main>
+	);
 }

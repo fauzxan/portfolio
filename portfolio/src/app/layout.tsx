@@ -5,18 +5,18 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Fauzaan's portfolio",
-  description: "A brief introduction to Fauzaan, and his interests",
+	title: "Fauzaan's portfolio",
+	description: "A brief introduction to Fauzaan, and his interests",
 };
 
 export default function RootLayout({
-  children,
+	children,
 }: {
-  children: React.ReactNode;
+	children: React.ReactNode;
 }) {
-  return (
-    <html lang="en">
-      <body className="bg-sky-950 min-h-screen">{children}</body>
-    </html>
-  );
+	return (
+		<html lang="en">
+			<body className="bg-sky-950 min-h-screen">{children}</body>
+		</html>
+	);
 }
