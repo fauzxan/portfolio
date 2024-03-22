@@ -18,12 +18,12 @@ export default function Jumbotron() {
 						- particularly in networks, distributed systems, and
 						data engineering. <br />I am currently also the
 						co-founder of a startup -{" "}
-						<a href="https://www.elgoapp.com" target="_blank">
+						<a href="https://elgo-webapp.vercel.app/" target="_blank">
 							<u>Elgo</u>
 						</a>{" "}
 						- that helps buildings save energy with AI and IoT. I am
 						also currently engaged in research work revolving around
-						compiler optimization at the SSA stage. <br />
+						compiler optimization at the SSA construction stage. <br />
 						During my free time you could find me playing around
 						with new tech, reading up on new journals, or
 						aggresively researching on my latest interest!
