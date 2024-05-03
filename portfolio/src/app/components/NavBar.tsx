@@ -40,10 +40,10 @@ export function NavBar() {
 					<img src="./favicon.ico" className="h-8" alt="Logo" />
 					<span
 						className={`self-center text-2xl font-semibold whitespace-nowrap text-${
-							isScrolled ? "white" : "black"
-						} dark:text-white`}
+							isScrolled ? "black" : "black"
+						} dark:text-${isScrolled ? "white" : "black"} dark:text-white`}
 					>
-						Fauzaan&apos;s Portfolio
+						<span className="hover:text-blue-500">Fauzaan&apos;s</span> <span className="hover:text-green-500">Portfolio</span>
 					</span>
 				</a>
 				<button
@@ -83,9 +83,9 @@ export function NavBar() {
 					>
 						<li>
 							<a
-								href="#"
+								href="./experience"
 								className={`block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 hover:shadow md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 text-${
-									isScrolled ? "white" : "black"
+									isScrolled ? "black" : "black"
 								} dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`}
 							>
 								Work Experience
@@ -95,7 +95,7 @@ export function NavBar() {
 							<a
 								href="./projects"
 								className={`block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 hover:shadow md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 text-${
-									isScrolled ? "white" : "black"
+									isScrolled ? "black" : "black"
 								} dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`}
 							>
 								Projects
@@ -103,9 +103,9 @@ export function NavBar() {
 						</li>
 						<li>
 							<a
-								href="#"
+								href="./research"
 								className={`block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 hover:shadow md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 text-${
-									isScrolled ? "white" : "black"
+									isScrolled ? "black" : "black"
 								} dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`}
 							>
 								Research
@@ -113,9 +113,9 @@ export function NavBar() {
 						</li>
 						<li>
 							<a
-								href="#"
+								href="./blogs"
 								className={`block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 hover:shadow md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 text-${
-									isScrolled ? "white" : "black"
+									isScrolled ? "black" : "black"
 								} dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`}
 							>
 								Blogs & Articles
