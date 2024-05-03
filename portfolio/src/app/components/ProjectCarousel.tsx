@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from "react";
-import Card from "./Card";
+import Card from "./ProjectCard";
 import CardProps from "./CardProps";
 
 
@@ -23,19 +23,19 @@ export default function Carousel() {
     }, []);
 
   return (
-    <div className="container mb-20 mx-auto">
+    <div className="box mb-20 mx-auto px-8">
 
-      <div className="mb-4 font-extrabold tracking-wide leading-none text-black dark:text-white text-center md:text-2xl lg:text-3xl">
+      <div className="mb-4 mt-8 font-extrabold tracking-wide leading-none text-black dark:text-white text-center md:text-2xl lg:text-3xl">
 							Project Highlights
 			</div>
       <div 
-        className="mb-4 font-extrabold tracking-wide leading-none text-black dark:text-white text-center dark:bg-black bg-white dark:bg-gradient-to-l bg-gradient-to-l dark:from-sky-950 from-sky-500 dark:hover:from-sky-500 hover:from-sky-950 md:text-sm lg:text-md"
+        className="mb-4 font-extrabold tracking-wide leading-none text-black dark:text-white text-center dark:hover:bg-black hover:bg-white dark:hover:bg-gradient-to-l hover:bg-gradient-to-l dark:hover:from-sky-950 hover:from-sky-500 dark:hover:from-sky-500 hover:from-sky-950 md:text-sm lg:text-md"
       >
         <a href="./projects">View Project Gallery</a>
       </div>
       <div className="flex flex-row gap-x-2 flex-nowrap overflow-x-auto">
         {projects.map((project, index) => (
-          <div key={index} className="flex-shrink-0 max-w-[25%]">
+          <div key={index} className="flex-shrink-0 w-full sm:max-w-[100%] md:max-w-[25%] mb-4">
             <Card name={project.name} description={project.description} tags={project.tags} imageSrc={project.imageSrc} documentation={project.documentation}/>
           </div>
         ))}

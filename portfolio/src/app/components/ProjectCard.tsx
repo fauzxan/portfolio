@@ -3,7 +3,7 @@ import Tag from "./Tag";
 
 export default function Card(content: CardProps) {
 	return (
-		<div className="max-w-lg h-100 bg-white border border-gray-200 md:hover:shadow-md hover:shadow-2xl rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+		<div className="flex flex-row justify-center max-w-lg h-88 bg-white border border-gray-200 md:hover:shadow-md hover:shadow-2xl rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
 			<a href="#">
 				<img className="rounded-t-sm" src={content.imageSrc} alt="" />
 			</a>
@@ -13,10 +13,10 @@ export default function Card(content: CardProps) {
 						{content.name}
 					</h5>
 				</a>
-				<p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+				<p className="mb-8 font-normal text-gray-700 dark:text-gray-400">
 					{content.description}
 				</p>
-				
+				<div className="flex-grow" />
 				<div className="flex flex-row gap-x-1">
 					{
 						content.tags.map((tag, index) => (
@@ -28,7 +28,7 @@ export default function Card(content: CardProps) {
 					
 				</div>
 				
-				<div className="flex flex-col gap-y-1">
+				<div className="flex flex-col gap-y-1 bottom-0">
 					
 				<a
 					href=""// replace this with the hover effect card.
