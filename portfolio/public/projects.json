@@ -1,0 +1,46 @@
+[
+    {
+        "name": "DNS-Chord optimization for subnets",
+        "description": "A chord based peer-peer caching system within subnets",
+        "imgSrc": "./favicon.ico",
+        "tags": ["Distribted Systems", "Networks"],
+        "documentation": "https://www.github.com/fauzxan/dns-chord"
+    },
+    {
+        "name": "IVY - Distributed Shared Memory",
+        "description": "An implementation of a DSM with sequential consistency",
+        "imgSrc": "./favicon.ico",
+        "tags": ["Distribted Systems"],
+        "documentation": "https://www.github.com/fauzxan/ivy"
+    },
+    {
+        "name": "Project Name",
+        "description": "Some very cool description that needs to fill this space",
+        "imgSrc": "./favicon.ico",
+        "tags": ["Distribted Systems", "Networks"]
+    },
+    {
+        "name": "Project Name",
+        "description": "Some very cool description that needs to fill this space",
+        "imgSrc": "./favicon.ico",
+        "tags": ["Distribted Systems", "Networks"]
+    },
+    {
+        "name": "Project Name",
+        "description": "Some very cool description that needs to fill this space",
+        "imgSrc": "./favicon.ico",
+        "tags": ["Distribted Systems", "Networks"]
+    },
+    {
+        "name": "Project Name",
+        "description": "Some very cool description that needs to fill this space",
+        "imgSrc": "./favicon.ico",
+        "tags": ["Distribted Systems", "Networks"]
+    },
+    {
+        "name": "Project Name",
+        "description": "Some very cool description that needs to fill this space",
+        "imgSrc": "./favicon.ico",
+        "tags": ["Distribted Systems", "Networks"]
+    }
+]
