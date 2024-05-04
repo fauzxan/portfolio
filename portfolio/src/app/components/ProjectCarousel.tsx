@@ -23,9 +23,9 @@ export default function Carousel() {
     }, []);
 
   return (
-    <div className="box mb-20 mx-auto px-8">
+    <div className="box mb-20 mt-20 mx-auto lg:px-44">
 
-      <div className="mb-4 mt-8 font-extrabold tracking-wide leading-none text-black dark:text-white text-center md:text-2xl lg:text-3xl">
+      <div className="mb-4 md:mt-44 xs:mt-24 font-extrabold tracking-wide leading-none text-black dark:text-white text-center md:text-2xl lg:text-3xl">
 							Project Highlights
 			</div>
       <div 

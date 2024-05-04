@@ -1,7 +1,7 @@
 export default function Jumbotron() {
 	return (
 		<section className="bg-center bg-transparent">
-			<div className="px-4 mx-auto max-w-screen-xl text-center mt-24 lg:mt-44">
+			<div className="md:px-24 xs-4 mx-auto max-w-screen-xl text-center mt-24 lg:mt-44">
 				<div className="flex md:flex-row sm:flex-col space-x-0">
 					<div className="basis-1/4 rounded-full py-0 md:scale-100 sm:scale-50">
 						<img

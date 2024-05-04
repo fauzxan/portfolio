@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import ThemeSwitch from "./ThemeSwitch";
 
 export function NavBar() {
 	const [isScrolled, setIsScrolled] = useState(false);
@@ -23,19 +24,21 @@ export function NavBar() {
 	};
 
 	return (
-		<nav className={`bg-${isScrolled ? "sky-200" : "white"} border-gray-200 dark:bg-sky-950 transition-all top-0 fixed w-full z-50`}>
-			<div className={`max-w-screen-xl flex flex-wrap items-center justify-between mx-auto ${isScrolled ? "p-1" : "p-4"}`}>
-				<a
-					href="./"
+		<nav className={`bg-${isScrolled ? "sky-200" : "white"} border-gray-200 dark:bg-black transition-all top-0 fixed w-full z-50`}>
+			<div className={`max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-1}`}>
+				<div
 					className="flex items-center space-x-3 rtl:space-x-reverse"
 				>
-					<img src="./favicon.ico" className="h-8" alt="Logo" />
+					{/* <img src="./favicon.ico" className="h-8" alt="Logo" /> */}
+					<ThemeSwitch />
+					<a href="./">
 					<span
 						className={`self-center text-2xl font-semibold whitespace-nowrap text-${isScrolled ? "black" : "black"} dark:text-${isScrolled ? "white" : "black"} dark:text-white`}
 					>
 						<span className="hover:text-blue-500">Fauzaan&apos;s</span> <span className="hover:text-green-500">Portfolio</span>
 					</span>
-				</a>
+					</a>
+				</div>
 				<button
 					data-collapse-toggle="navbar-sticky"
 					type="button"
@@ -62,13 +65,11 @@ export function NavBar() {
 					</svg>
 				</button>
 				<div
-					className={`${
-						isMobileMenuOpen ? "block" : "hidden"
-					} w-full md:block md:w-auto`}
+					className={`${isMobileMenuOpen ? "block" : "hidden"} w-full md:block md:w-auto`}
 					id="navbar-sticky"
 				>
 					<ul
-						className="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:border-gray-700"
+						className="font-medium flex flex-col justify-center p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:border-gray-700"
 						onMouseLeave={toggleMobileMenu}
 					>
 						<li>
