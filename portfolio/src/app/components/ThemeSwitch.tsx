@@ -22,11 +22,11 @@ export default function ThemeSwitch() {
     )
 
   if (resolvedTheme === 'dark') {
-    return <FiSun onClick={() => setTheme('light')} />
+    return <FiSun className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" onClick={() => setTheme('light')} />
   }
 
   if (resolvedTheme === 'light') {
-    return <FiMoon onClick={() => setTheme('dark')} />
+    return <FiMoon className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" onClick={() => setTheme('dark')} />
   }
 
 }

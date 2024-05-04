@@ -24,19 +24,21 @@ export function NavBar() {
 	};
 
 	return (
-		<nav className={`bg-${isScrolled ? "sky-200" : "white"} border-gray-200 dark:bg-sky-950 transition-all top-0 fixed w-full z-50`}>
-			<div className={`max-w-screen-xl flex flex-wrap items-center justify-between mx-auto ${isScrolled ? "p-1" : "p-4"}`}>
-				<a
-					href="./"
+		<nav className={`bg-${isScrolled ? "sky-200" : "white"} border-gray-200 dark:bg-black transition-all top-0 fixed w-full z-50`}>
+			<div className={`max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-1}`}>
+				<div
 					className="flex items-center space-x-3 rtl:space-x-reverse"
 				>
-					<img src="./favicon.ico" className="h-8" alt="Logo" />
+					{/* <img src="./favicon.ico" className="h-8" alt="Logo" /> */}
+					<ThemeSwitch />
+					<a href="./">
 					<span
 						className={`self-center text-2xl font-semibold whitespace-nowrap text-${isScrolled ? "black" : "black"} dark:text-${isScrolled ? "white" : "black"} dark:text-white`}
 					>
 						<span className="hover:text-blue-500">Fauzaan&apos;s</span> <span className="hover:text-green-500">Portfolio</span>
 					</span>
-				</a>
+					</a>
+				</div>
 				<button
 					data-collapse-toggle="navbar-sticky"
 					type="button"
@@ -100,9 +102,6 @@ export function NavBar() {
 								className={`block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 hover:shadow md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 text-${isScrolled ? "black" : "black"} dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`}>
 								Blogs & Articles
 							</a>
-						</li>
-						<li>
-							<ThemeSwitch />
 						</li>
 					</ul>
 				</div>
