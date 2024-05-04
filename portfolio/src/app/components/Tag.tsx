@@ -27,8 +27,10 @@ export default function Tag(content: {content: string}){
     
     return (
         // Add color, hover effect, interactivity later
-        <div className={`box-border p-1 mb-2 border-1 bg-${color} text-white rounded-lg md:text-xs lg:text-xs`}>
+        <div className="flex flex-wrap">
+        <div className={`inline-block p-1 mb-2 border-1 bg-${color} text-white rounded-lg md:text-xs lg:text-xs min-w-min min-h-min`}>
             {content.content}
+        </div>
         </div>
     )
 }

@@ -1,15 +1,15 @@
 export default function Jumbotron() {
 	return (
 		<section className="bg-center bg-transparent">
-			<div className="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
+			<div className="px-4 mx-auto max-w-screen-xl text-center mt-24 lg:mt-44">
 				<div className="flex md:flex-row sm:flex-col space-x-0">
-					<div className="basis-1/4 rounded-full p-0 md:scale-100 sm:scale-50">
+					<div className="basis-1/4 rounded-full py-0 md:scale-100 sm:scale-50">
 						<img
 							className="rounded-full shadow-2xl shadow-black hover:shadow-blue-500 dark:shadow-sky-500 dark:hover:shadow-blue-700"
 							src="./profile.jpg"
 						/>
 					</div>
-					<div className="mb-8 px-0 mx-0 md:text-lg sm:text-sm basis-3/4 font-normal text-slate-800 dark:text-white text-justify lg:text-xl sm:px-16 lg:px-48 justify-self-stretch">
+					<div className="mb-8 px-0 mx-0 md:text-lg sm:text-sm basis-3/4 font-normal text-slate-800 dark:text-white text-justify lg:text-xl sm:px-8 lg:px-48 justify-self-stretch">
 						<div className="mb-4 font-extrabold tracking-tight leading-none text-center md:text-2xl lg:text-3xl">
 							Futurist • Entrepreneur • Engineer
 						</div>
