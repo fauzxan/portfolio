@@ -63,9 +63,7 @@ export function NavBar() {
 					</svg>
 				</button>
 				<div
-					className={`${
-						isMobileMenuOpen ? "block" : "hidden"
-					} w-full md:block md:w-auto`}
+					className={`${isMobileMenuOpen ? "block" : "hidden"} w-full md:block md:w-auto`}
 					id="navbar-sticky"
 				>
 					<ul
@@ -103,7 +101,7 @@ export function NavBar() {
 								Blogs & Articles
 							</a>
 						</li>
-						<li className="justify-center">
+						<li>
 							<ThemeSwitch />
 						</li>
 					</ul>
