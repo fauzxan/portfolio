@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import ThemeSwitch from "./ThemeSwitch";
 
 export function NavBar() {
 	const [isScrolled, setIsScrolled] = useState(false);
@@ -68,7 +69,7 @@ export function NavBar() {
 					id="navbar-sticky"
 				>
 					<ul
-						className="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:border-gray-700"
+						className="font-medium flex flex-col justify-center p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:border-gray-700"
 						onMouseLeave={toggleMobileMenu}
 					>
 						<li>
@@ -101,6 +102,9 @@ export function NavBar() {
 								className={`block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 hover:shadow md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 text-${isScrolled ? "black" : "black"} dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`}>
 								Blogs & Articles
 							</a>
+						</li>
+						<li className="justify-center">
+							<ThemeSwitch />
 						</li>
 					</ul>
 				</div>
