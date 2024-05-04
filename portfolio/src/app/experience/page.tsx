@@ -5,7 +5,7 @@ export default function Projects() {
 	return (
 		<div>
 			<NavBar />
-			<div className="mb-4 pt-20 font-extrabold tracking-wide leading-none text-black dark:text-white text-center md:text-2xl lg:text-3xl">
+			<div className="mb-4 pt-20 font-extrabold tracking-wide leading-none text-black dark:text-white text-center text-3xll">
 					Experience Page
 			</div>
 			<Footer />
