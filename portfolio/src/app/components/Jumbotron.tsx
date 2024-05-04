@@ -1,29 +1,27 @@
 export default function Jumbotron() {
 	return (
 		<section className="bg-center bg-transparent">
-			<div className="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
+			<div className="px-4 mx-auto max-w-screen-xl text-center mt-24 lg:mt-44">
 				<div className="flex md:flex-row sm:flex-col space-x-0">
-					<div className="basis-1/4 rounded-full p-0 md:scale-100 sm:scale-50">
+					<div className="basis-1/4 rounded-full py-0 md:scale-100 sm:scale-50">
 						<img
-							className="rounded-full shadow-2xl shadow-black dark:shadow-sky-500"
+							className="rounded-full shadow-2xl shadow-black hover:shadow-blue-500 dark:shadow-sky-500 dark:hover:shadow-blue-700"
 							src="./profile.jpg"
 						/>
 					</div>
-					<div className="mb-8 px-0 mx-0 md:text-lg sm:text-sm basis-3/4 font-normal text-slate-800 dark:text-white text-left lg:text-xl sm:px-16 lg:px-48 justify-self-stretch">
+					<div className="mb-8 px-0 mx-0 md:text-lg sm:text-sm basis-3/4 font-normal text-slate-800 dark:text-white text-justify lg:text-xl sm:px-8 lg:px-48 justify-self-stretch">
 						<div className="mb-4 font-extrabold tracking-tight leading-none text-center md:text-2xl lg:text-3xl">
 							Futurist • Entrepreneur • Engineer
 						</div>
 						Hey everyone! I&apos;m a full time software engineer and
-						a student, with a wide knowledge base in backend systems
-						- particularly in networks, distributed systems, and
-						data engineering. <br />I am currently also the
+						a learner, with a wide knowledge base in backend systems
+						- particularly in <span className="bg-green-500">networks</span>, <span className="bg-yellow-500">distributed systems</span>,
+						 <span className="bg-blue-500">data engineering</span>, and <span className="bg-red-600">systems security</span>. <br />I am currently also the
 						co-founder of a startup -{" "}
-						<a href="https://elgo-webapp.vercel.app/" target="_blank">
+						<a className="text-green-700" href="https://elgo-webapp.vercel.app/" target="_blank">
 							<u>Elgo</u>
 						</a>{" "}
-						- that helps buildings save energy with AI and IoT. I am
-						also currently engaged in research work revolving around
-						compiler optimization at the SSA construction stage. <br />
+						- that helps kitchens save energy with AI and IoT. <br />
 						During my free time you could find me playing around
 						with new tech, reading up on new journals, or
 						aggresively researching on my latest interest!

@@ -1,0 +1,67 @@
+[
+    {
+        "name": "DNS-Chord optimization for subnets",
+        "description": "A chord based peer-peer caching system within subnets",
+        "imgSrc": "./favicon.ico",
+        "tags": ["Distributed Systems", "Networks"],
+        "documentation": "https://www.github.com/fauzxan/dns-chord"
+    },
+    {
+        "name": "IVY - Distributed Shared Memory",
+        "description": "An implementation of a DSM with sequential consistency",
+        "imgSrc": "./favicon.ico",
+        "tags": ["Distributed Systems"],
+        "documentation": "https://www.github.com/fauzxan/ivy"
+    },
+    {
+        "name": "Clocks, Causality and Leader Elections",
+        "description": "How are leaders chosen to perform certain tasks?",
+        "imgSrc": "./favicon.ico",
+        "tags": ["Distribted Systems", "Networks"],
+        "documentation": "https://github.com/fauzxan/distributed_systems"
+    },
+    {
+        "name": "Distributed Mutual Exclusion Protocols",
+        "description": "DME is crucial to manage access to shared resources on a system",
+        "imgSrc": "./favicon.ico",
+        "tags": ["Distribted Systems", "Networks"],
+        "documentation": "https://github.com/fauzxan/distributed_mutual_exclusion"
+    },
+    {
+        "name": "DNS-Chord optimization for subnets",
+        "description": "A chord based peer-peer caching system within subnets",
+        "imgSrc": "./favicon.ico",
+        "tags": ["Distributed Systems", "Networks"],
+        "documentation": "https://www.github.com/fauzxan/dns-chord"
+    },
+    {
+        "name": "IVY - Distributed Shared Memory",
+        "description": "An implementation of a DSM with sequential consistency",
+        "imgSrc": "./favicon.ico",
+        "tags": ["Distributed Systems"],
+        "documentation": "https://www.github.com/fauzxan/ivy"
+    },
+    {
+        "name": "Clocks, Causality and Leader Elections",
+        "description": "How are leaders chosen to perform certain tasks?",
+        "imgSrc": "./favicon.ico",
+        "tags": ["Distribted Systems", "Networks"],
+        "documentation": "https://github.com/fauzxan/distributed_systems"
+    },
+    {
+        "name": "Distributed Mutual Exclusion Protocols",
+        "description": "DME is crucial to manage access to shared resources on a system",
+        "imgSrc": "./favicon.ico",
+        "tags": ["Distribted Systems", "Networks"],
+        "documentation": "https://github.com/fauzxan/distributed_mutual_exclusion"
+    }
+    ,
+    {
+        "name": "Distributed Mutual Exclusion Protocols",
+        "description": "DME is crucial to manage access to shared resources on a system",
+        "imgSrc": "./favicon.ico",
+        "tags": ["Distribted Systems", "Networks", "Artificial Intelligence"],
+        "documentation": "https://github.com/fauzxan/distributed_mutual_exclusion"
+    }
+    
+]
