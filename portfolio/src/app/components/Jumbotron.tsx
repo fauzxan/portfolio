@@ -5,7 +5,7 @@ export default function Jumbotron() {
 				<div className="flex md:flex-row sm:flex-col space-x-0">
 					<div className="basis-1/4 rounded-full py-0 md:scale-100 sm:scale-50">
 						<img
-							className="rounded-full shadow-2xl shadow-black hover:shadow-blue-500 dark:shadow-sky-500 dark:hover:shadow-blue-700"
+							className="rounded-full shadow-2xl shadow-slate-950 hover:shadow-blue-700 dark:shadow-slate-600 dark:hover:shadow-blue-700"
 							src="./profile.jpg"
 						/>
 					</div>

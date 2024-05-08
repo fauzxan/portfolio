@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
+import Particles from "./components/Particles";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +18,7 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en" suppressHydrationWarning>
-			<body className="bg-gradient-to-r from-sky-700 dark:bg-black dark:bg-gradient-to-r dark:from-sky-950 min-h-screen">
+			<body className="bg-gradient-to-tl dark:from-black from-white dark:via-zinc-600/20 via-sky-700 dark:to-black to-white min-h-screen">
 				<Providers>
 					{children}
 				</Providers>
