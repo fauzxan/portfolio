@@ -26,7 +26,7 @@ export default function Projects() {
   return (
     <div>
       <NavBar />
-      <Particles className="absolute inset-0 -z-10 animate-fade-in duration-10000" quantity={200} />
+      <Particles className="absolute inset-0 -z-10 animate-fade-in duration-10000" quantity={100} />
 
       <div className="mb-4 pt-20 font-extrabold tracking-wide leading-none text-black dark:text-white text-center text-3xl">
         <span className="bg-clip-text text-transparent bg-gradient-to-r from-stone-800 to-stone-950 dark:from-amber-500 dark:to-slate-500">

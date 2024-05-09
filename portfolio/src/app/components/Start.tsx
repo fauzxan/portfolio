@@ -3,7 +3,7 @@ import Particles from "../components/Particles";
 export default function Start() {
   return (
     <div className="flex flex-col p-12 items-center justify-center w-screen h-screen overflow-hidden">
-      <Particles className="absolute inset-0 animate-fade-in duration-10000" quantity={200} />
+      <Particles className="absolute inset-0 animate-fade-in duration-10000" quantity={100} />
       <h1 className="z-10 animate-fade-in text-4xl text-transparent duration-1000 bg-white cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text ">
         Hi there!
       </h1>
