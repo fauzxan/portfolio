@@ -68,11 +68,11 @@ export function NavBar() {
 								Projects
 							</Link>
 						</li>
-						<li aria-hidden="true" className="border-l border-zinc-300 dark:border-zinc-700 h-4 mx-2" />
+						<li aria-hidden="true" className="border-l border-zinc-500 dark:border-zinc-700 h-4 mx-2" />
 						<li>
 							<Link
 								href="#"
-								className="text-zinc-500 dark:text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-200 transition-colors"
+								className="text-zinc-900 dark:text-zinc-100 hover:text-blue-700 dark:hover:text-blue-500 transition-colors"
 							>
 								Travel diary
 							</Link>
@@ -80,7 +80,7 @@ export function NavBar() {
 						<li>
 							<Link
 								href="#"
-								className="text-zinc-500 dark:text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-200 transition-colors"
+								className="text-zinc-900 dark:text-zinc-100 hover:text-blue-700 dark:hover:text-blue-500 transition-colors"
 							>
 								Now
 							</Link>
@@ -130,7 +130,7 @@ export function NavBar() {
 							<Link
 								href="#"
 								onClick={closeMobileMenu}
-								className="block py-2 px-3 rounded text-zinc-500 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800"
+								className="block py-2 px-3 rounded text-zinc-900 dark:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-800"
 							>
 								Travel diary
 							</Link>
@@ -139,7 +139,7 @@ export function NavBar() {
 							<Link
 								href="#"
 								onClick={closeMobileMenu}
-								className="block py-2 px-3 rounded text-zinc-500 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800"
+								className="block py-2 px-3 rounded text-zinc-900 dark:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-800"
 							>
 								Now
 							</Link>
