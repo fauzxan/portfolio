@@ -2,7 +2,6 @@ import Image from "next/image";
 import { NavBar } from "./components/NavBar";
 import { Footer } from "./components/Footer";
 import Jumbotron from "./components/Jumbotron";
-import Carousel from "./components/ProjectCarousel";
 import Particles from "./components/Particles";
 import Start from "./components/Start";
 
@@ -12,7 +11,6 @@ export default function Home() {
       <NavBar />
       <Start />
 	  <Jumbotron />
-      <Carousel />
       <Footer />
     </main>
   );
