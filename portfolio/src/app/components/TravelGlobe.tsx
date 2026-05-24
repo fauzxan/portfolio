@@ -25,9 +25,8 @@ const PLANNED_COUNTRIES = new Set<string>([
 const PLACES_TO_NE: Record<string, string> = {
   UAE: "United Arab Emirates",
   "Czech Republic": "Czechia",
-  // 110m resolution merges Hong Kong and Macau into China.
-  "Hong Kong": "China",
-  Macau: "China",
+  "Hong Kong": "Hong Kong S.A.R.",
+  Macau: "Macao S.A.R",
 };
 
 function placesCountryToNE(name: string): string {
@@ -59,7 +58,7 @@ export default function TravelGlobe({ places }: { places: Place[] }) {
   }, []);
 
   useEffect(() => {
-    fetch("/countries-110m.geojson")
+    fetch("/countries-50m.geojson")
       .then((r) => r.json())
       .then((data) => setCountries(data.features));
   }, []);
@@ -103,10 +102,11 @@ export default function TravelGlobe({ places }: { places: Place[] }) {
           globeImageUrl="/earth-blue-marble.jpg"
           onGlobeReady={handleGlobeReady}
           polygonsData={countries}
-          polygonAltitude={0.008}
+          polygonAltitude={0.003}
+          {...({ polygonResolution: 175 } as any)}
           polygonCapColor={getCountryColor}
-          polygonSideColor={() => "rgba(0, 0, 0, 0.15)"}
-          polygonStrokeColor={() => "rgba(255, 255, 255, 0.18)"}
+          polygonSideColor={() => "rgba(0, 0, 0, 0.4)"}
+          polygonStrokeColor={() => "#000000"}
           polygonLabel={() => ""}
           onPolygonHover={handlePolygonHover}
         />
