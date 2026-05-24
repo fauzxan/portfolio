@@ -2,17 +2,16 @@ import Image from "next/image";
 import { NavBar } from "./components/NavBar";
 import { Footer } from "./components/Footer";
 import Jumbotron from "./components/Jumbotron";
-import Carousel from "./components/ProjectCarousel";
 import Particles from "./components/Particles";
 import Start from "./components/Start";
 
 export default function Home() {
   return (
     <main className="">
+      <Particles className="fixed inset-0 -z-10 pointer-events-none" quantity={200} />
       <NavBar />
       <Start />
 	  <Jumbotron />
-      <Carousel />
       <Footer />
     </main>
   );
