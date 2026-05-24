@@ -8,6 +8,7 @@ import Start from "./components/Start";
 export default function Home() {
   return (
     <main className="">
+      <Particles className="fixed inset-0 -z-10 pointer-events-none" quantity={200} />
       <NavBar />
       <Start />
 	  <Jumbotron />
