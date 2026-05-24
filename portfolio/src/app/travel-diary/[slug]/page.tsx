@@ -19,7 +19,7 @@ export default function Entry({ params }: { params: { slug: string } }) {
       <NavBar />
       <main className="pt-24 pb-16 max-w-2xl mx-auto px-4">
         <h1 className="text-4xl font-semibold text-zinc-900 dark:text-zinc-100">
-          {place.name}{place.country ? `, ${place.country}` : ""}
+          {place.name}{place.country && place.country !== place.name ? `, ${place.country}` : ""}
         </h1>
         <p className="text-zinc-500 dark:text-zinc-400 mt-2">{place.date}</p>
         <div className="mt-8 aspect-video bg-zinc-200/60 dark:bg-zinc-800/60 backdrop-blur rounded flex items-center justify-center text-zinc-500 dark:text-zinc-400">
