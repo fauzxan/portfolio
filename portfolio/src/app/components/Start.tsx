@@ -1,9 +1,6 @@
-import Particles from "../components/Particles";
-
 export default function Start() {
   return (
     <div className="flex flex-col p-12 items-center justify-center w-screen h-screen overflow-hidden">
-      <Particles className="absolute inset-0" quantity={200} />
       <h1 className="z-10 text-4xl text-transparent bg-white cursor-default sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text ">
         Hi there!
       </h1>
