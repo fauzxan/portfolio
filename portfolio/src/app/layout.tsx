@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en" suppressHydrationWarning>
-			<body className="bg-gradient-to-tl dark:from-black from-white dark:via-zinc-600/20 via-sky-700 dark:to-black to-white min-h-screen">
+			<body className={`${inter.className} bg-gradient-to-tl dark:from-black from-white dark:via-zinc-600/20 via-sky-700 dark:to-black to-white min-h-screen`}>
 				<Providers>
 					{children}
 				</Providers>
