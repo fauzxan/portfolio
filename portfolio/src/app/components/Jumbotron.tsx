@@ -11,12 +11,12 @@ export default function Jumbotron() {
 					</div>
 					<div className="mb-8 px-0 mx-0 md:text-lg sm:text-sm basis-3/4 font-normal text-slate-800 dark:text-white text-justify lg:text-xl sm:px-8 lg:px-48 justify-self-stretch">
 						<div className="mb-4 font-extrabold tracking-tight leading-none text-center md:text-2xl lg:text-3xl">
-							Futurist • Entrepreneur • Engineer
+							Engineer • Entrepreneur
 						</div>
 						Hey everyone! I&apos;m a full time software engineer and
 						a learner, with a wide knowledge base in backend systems
-						- particularly in <span className="bg-green-500">networks</span>, <span className="bg-yellow-500">distributed systems</span>,
-						 <span className="bg-blue-500">data engineering</span>, and <span className="bg-red-600">systems security</span>. <br />I am currently also the
+						- particularly in <span className="font-semibold">networks</span>, <span className="font-semibold">distributed systems</span>,{" "}
+						<span className="font-semibold">data engineering</span>, and <span className="font-semibold">systems security</span>. <br />I am currently also the
 						co-founder of a startup -{" "}
 						<a className="text-green-700" href="https://elgo-webapp.vercel.app/" target="_blank">
 							<u>Elgo</u>
@@ -24,7 +24,7 @@ export default function Jumbotron() {
 						- that helps kitchens save energy with AI and IoT. <br />
 						During my free time you could find me playing around
 						with new tech, reading up on new journals, or
-						aggresively researching on my latest interest!
+						aggressively researching on my latest interest!
 					</div>
 				</div>
 
@@ -33,7 +33,7 @@ export default function Jumbotron() {
 						href="#"
 						className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-sky-600 hover:bg-sky-400 dark:bg-sky-900 dark:hover:bg-sky-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
 					>
-						What am I upto
+						What am I up to
 						<svg
 							className="w-3.5 h-3.5 ms-2 rtl:rotate-180"
 							aria-hidden="true"
