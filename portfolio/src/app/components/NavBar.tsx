@@ -71,7 +71,7 @@ export function NavBar() {
 						<li aria-hidden="true" className="border-l border-zinc-500 dark:border-zinc-700 h-4 mx-2" />
 						<li>
 							<Link
-								href="#"
+								href="/travel-diary"
 								className="text-zinc-900 dark:text-zinc-100 hover:text-blue-700 dark:hover:text-blue-500 transition-colors"
 							>
 								Travel diary
@@ -128,7 +128,7 @@ export function NavBar() {
 						</li>
 						<li>
 							<Link
-								href="#"
+								href="/travel-diary"
 								onClick={closeMobileMenu}
 								className="block py-2 px-3 rounded text-zinc-900 dark:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-800"
 							>
