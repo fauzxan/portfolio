@@ -1,49 +1,34 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import Link from "next/link";
 import ThemeSwitch from "./ThemeSwitch";
 
 export function NavBar() {
-	const [isScrolled, setIsScrolled] = useState(false);
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-	// Check if the scroll threshold is greater than 100, then change the isScrolled parameter accordingly
-	useEffect(() => {
-		const handleScroll = () => {
-			const threshold = 100;
-			const scrolled = window.scrollY > threshold;
-			setIsScrolled(scrolled);
-		};
-		window.addEventListener("scroll", handleScroll);
-		return () => {
-			window.removeEventListener("scroll", handleScroll);
-		};
-	}, []);
 
 	const toggleMobileMenu = () => {
 		setIsMobileMenuOpen(!isMobileMenuOpen);
 	};
 
+	const closeMobileMenu = () => {
+		setIsMobileMenuOpen(false);
+	};
+
 	return (
-		<nav className={`bg-${isScrolled ? "sky-200" : "white"} border-gray-200 dark:bg-black transition-all top-0 fixed w-full z-50`}>
-			<div className={`max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-1}`}>
-				<div
-					className="flex items-center space-x-3 rtl:space-x-reverse"
-				>
-					<ThemeSwitch />
-					<a href="./">
-					<span
-						className={`self-center text-2xl font-semibold whitespace-nowrap text-${isScrolled ? "black" : "black"} dark:text-${isScrolled ? "white" : "black"} dark:text-white`}
-					>
-						<span className="hover:text-blue-500">Fauzaan&apos;s</span> <span className="hover:text-green-500">Portfolio</span>
+		<nav className="fixed top-0 w-full z-50 bg-white/70 dark:bg-black/50 backdrop-blur border-b border-zinc-200 dark:border-zinc-800">
+			<div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-3">
+				<Link href="/" className="flex items-center">
+					<span className="self-center text-2xl font-semibold whitespace-nowrap text-zinc-900 dark:text-zinc-100">
+						<span className="hover:text-blue-500">Fauzaan&apos;s</span>{" "}
+						<span className="hover:text-green-500">Portfolio</span>
 					</span>
-					</a>
-				</div>
+				</Link>
+
 				<button
-					data-collapse-toggle="navbar-sticky"
 					type="button"
-					className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-white focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+					className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-zinc-500 rounded-lg md:hidden hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-zinc-200 dark:text-zinc-400 dark:hover:bg-zinc-800 dark:focus:ring-zinc-700"
 					aria-controls="navbar-sticky"
-					aria-expanded="false"
+					aria-expanded={isMobileMenuOpen}
 					onClick={toggleMobileMenu}
 				>
 					<span className="sr-only">Open main menu</span>
@@ -63,44 +48,104 @@ export function NavBar() {
 						/>
 					</svg>
 				</button>
-				<div
-					className={`${isMobileMenuOpen ? "block" : "hidden"} w-full md:block md:w-auto`}
-					id="navbar-sticky"
-				>
-					<ul
-						className="font-medium flex flex-col justify-center p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:border-gray-700"
-						onMouseLeave={toggleMobileMenu}
-					>
+
+				{/* Desktop nav */}
+				<div className="hidden md:flex md:items-center md:gap-6" id="navbar-sticky">
+					<ul className="flex flex-row items-center gap-6 font-medium">
 						<li>
-							<a
-								href="./experience"
-								className={`block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 hover:shadow md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 text-${
-									isScrolled ? "black" : "black"
-								} dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`}
+							<Link
+								href="/experience"
+								className="text-zinc-900 dark:text-zinc-100 hover:text-blue-700 dark:hover:text-blue-500 transition-colors"
 							>
-								Work Experience
-							</a>
+								Work experience
+							</Link>
 						</li>
 						<li>
-							<a
-								href="./projects"
-								className={`block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 hover:shadow md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 text-${isScrolled ? "black" : "black"} dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`}>
+							<Link
+								href="/projects"
+								className="text-zinc-900 dark:text-zinc-100 hover:text-blue-700 dark:hover:text-blue-500 transition-colors"
+							>
 								Projects
-							</a>
+							</Link>
+						</li>
+						<li aria-hidden="true" className="border-l border-zinc-300 dark:border-zinc-700 h-4 mx-2" />
+						<li>
+							<Link
+								href="#"
+								className="text-zinc-500 dark:text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-200 transition-colors"
+							>
+								Travel diary
+							</Link>
 						</li>
 						<li>
-							<a
-								href="./research"
-								className={`block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 hover:shadow md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 text-${isScrolled ? "black" : "black"} dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`}>
-								Research
-							</a>
+							<Link
+								href="#"
+								className="text-zinc-500 dark:text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-200 transition-colors"
+							>
+								Now
+							</Link>
+						</li>
+					</ul>
+					<div className="flex items-center">
+						<ThemeSwitch />
+					</div>
+				</div>
+
+				{/* Mobile menu */}
+				<div
+					className={`${isMobileMenuOpen ? "block" : "hidden"} w-full md:hidden`}
+					id="navbar-sticky-mobile"
+				>
+					<ul className="flex flex-col p-4 mt-4 rounded-lg font-medium gap-1">
+						<li>
+							<span className="block text-xs uppercase tracking-wider text-zinc-400 dark:text-zinc-500 px-3 pb-1">
+								Work
+							</span>
 						</li>
 						<li>
-							<a
-								href="./blogs"
-								className={`block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 hover:shadow md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 text-${isScrolled ? "black" : "black"} dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`}>
-								Blogs & Articles
-							</a>
+							<Link
+								href="/experience"
+								onClick={closeMobileMenu}
+								className="block py-2 px-3 rounded text-zinc-900 dark:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-800"
+							>
+								Work experience
+							</Link>
+						</li>
+						<li>
+							<Link
+								href="/projects"
+								onClick={closeMobileMenu}
+								className="block py-2 px-3 rounded text-zinc-900 dark:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-800"
+							>
+								Projects
+							</Link>
+						</li>
+						<li aria-hidden="true" className="border-t border-zinc-200 dark:border-zinc-800 my-2" />
+						<li>
+							<span className="block text-xs uppercase tracking-wider text-zinc-400 dark:text-zinc-500 px-3 pb-1">
+								Life
+							</span>
+						</li>
+						<li>
+							<Link
+								href="#"
+								onClick={closeMobileMenu}
+								className="block py-2 px-3 rounded text-zinc-500 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800"
+							>
+								Travel diary
+							</Link>
+						</li>
+						<li>
+							<Link
+								href="#"
+								onClick={closeMobileMenu}
+								className="block py-2 px-3 rounded text-zinc-500 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800"
+							>
+								Now
+							</Link>
+						</li>
+						<li className="flex items-center px-3 pt-3">
+							<ThemeSwitch />
 						</li>
 					</ul>
 				</div>
