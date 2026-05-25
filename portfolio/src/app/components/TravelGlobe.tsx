@@ -5,6 +5,16 @@ import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { Place } from "../travel-diary/places";
 
+function featureCentroid(feature: any): [number, number] {
+  let sumLat = 0, sumLng = 0, count = 0;
+  const collect = (arr: any) => {
+    if (!Array.isArray(arr[0])) { sumLng += arr[0]; sumLat += arr[1]; count++; }
+    else arr.forEach(collect);
+  };
+  collect(feature.geometry.coordinates);
+  return [sumLat / count, sumLng / count];
+}
+
 const Globe = dynamic(() => import("react-globe.gl"), { ssr: false });
 
 // Tailwind palette anchored colors, tuned for legibility against the blue marble texture.
@@ -39,7 +49,6 @@ export default function TravelGlobe({ places }: { places: Place[] }) {
   const [countries, setCountries] = useState<any[]>([]);
   const [activeCountry, setActiveCountry] = useState<string | null>(null);
 
-  // Cities grouped by Natural Earth country name (so China bucket also has HK/Macau).
   const citiesByNECountry = useMemo(() => {
     const map = new Map<string, Place[]>();
     places.forEach((p) => {
@@ -49,6 +58,15 @@ export default function TravelGlobe({ places }: { places: Place[] }) {
     });
     return map;
   }, [places]);
+
+  const labelPoints = useMemo(() => {
+    return countries
+      .filter((f) => citiesByNECountry.has(f.properties?.ADMIN) || PLANNED_COUNTRIES.has(f.properties?.ADMIN))
+      .map((f) => {
+        const [lat, lng] = featureCentroid(f);
+        return { name: f.properties.ADMIN as string, lat, lng };
+      });
+  }, [countries, citiesByNECountry]);
 
   useEffect(() => {
     const onResize = () => setSize({ w: window.innerWidth, h: window.innerHeight });
@@ -102,13 +120,24 @@ export default function TravelGlobe({ places }: { places: Place[] }) {
           globeImageUrl="/earth-blue-marble.jpg"
           onGlobeReady={handleGlobeReady}
           polygonsData={countries}
-          polygonAltitude={0.003}
-          {...({ polygonResolution: 175 } as any)}
+          polygonAltitude={0}
+          {...({ polygonResolution: 160 } as any)}
           polygonCapColor={getCountryColor}
           polygonSideColor={() => "rgba(0, 0, 0, 0.4)"}
           polygonStrokeColor={() => "#000000"}
           polygonLabel={() => ""}
           onPolygonHover={handlePolygonHover}
+          labelsData={labelPoints}
+          {...({
+            labelText: (d: any) => d.name,
+            labelLat: (d: any) => d.lat,
+            labelLng: (d: any) => d.lng,
+            labelAltitude: 0.01,
+            labelSize: 1.2,
+            labelColor: () => "rgba(255, 255, 255, 0.9)",
+            labelDotRadius: 0,
+            labelResolution: 2,
+          } as any)}
         />
       </div>
 
